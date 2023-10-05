@@ -1,0 +1,66 @@
+#### 
+
+[Project](../../../../index.md) > [(local)\\](../../../index.md) > [User databases](../../index.md) > [Intergulf](../index.md) > [Tables](Tables.md) > dbo.ProductGP
+
+# ![Tables](../../../../Images/Table32.png) [dbo].[ProductGP]
+
+---
+
+## <a name="#properties"></a>Properties
+
+| Property | Value |
+|---|---|
+| Collation | SQL_Latin1_General_CP1_CI_AS |
+| Row Count (~) | 3955 |
+| Created | 6:47:35 PM Monday, January 29, 2007 |
+| Last Modified | 11:50:49 AM Sunday, January 15, 2017 |
+
+
+---
+
+## <a name="#columns"></a>Columns
+
+| Key | Name | Data Type | Max Length (Bytes) | Nullability |
+|---|---|---|---|---|
+| [![Cluster Primary Key PK_ProductGP: ID](../../../../Images/pkcluster.png)](#indexes) | ID | int | 4 | NOT NULL |
+|  | GUIDE_NO | nvarchar(50) | 100 | NULL allowed |
+|  | SEQUENCE | float | 8 | NULL allowed |
+|  | SENTENCE | nvarchar(255) | 510 | NULL allowed |
+
+
+---
+
+## <a name="#indexes"></a>Indexes
+
+| Key | Name | Key Columns | Unique |
+|---|---|---|---|
+| [![Cluster Primary Key PK_ProductGP: ID](../../../../Images/pkcluster.png)](#indexes) | PK_ProductGP | ID | YES |
+
+
+---
+
+## <a name="#sqlscript"></a>SQL Script
+
+```sql
+CREATE TABLE [dbo].[ProductGP]
+(
+[ID] [int] NOT NULL,
+[GUIDE_NO] [nvarchar] (50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+[SEQUENCE] [float] NULL,
+[SENTENCE] [nvarchar] (255) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[ProductGP] ADD CONSTRAINT [PK_ProductGP] PRIMARY KEY CLUSTERED ([ID]) ON [PRIMARY]
+GO
+
+```
+
+
+---
+
+###### Author:  Sastry
+
+###### Copyright 2023 - All Rights Reserved
+
+###### Created: Thursday, October 5, 2023 9:55:17 PM
+
